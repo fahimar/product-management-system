@@ -5,7 +5,7 @@ export interface Product {
   category: string;
   quantity: number;
   unitPrice: number;
-  // Add these if you need them
+  // Optional properties
   title?: string;
   body?: string;
 }
