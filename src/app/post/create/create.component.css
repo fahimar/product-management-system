@@ -1,0 +1,17 @@
+.form-group{
+  font-size: 15px;
+}
+
+.navbar.bg-gray {
+  background-color: gray;
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+
+.container-fluid.justify-content-center {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,102 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-gray">
+  <div class="container-fluid justify-content-center">
+    <a class="navbar-brand text-center" href="#" routerLink="/product/index">
+      <i class="fas fa-home me-2"></i> <!-- Home icon with some right margin -->
+      Product Management System
+    </a>
+  </div>
+</nav>
+
+<div class="container">
+    <h5 class="text-center p-2" routerLink="/product/index">Create New Product</h5>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form-group">
+      <label for="name">
+        Name: <span class="text-danger">*</span> <!-- Red asterisk for required field -->
+      </label>
+      <input
+        formControlName="name"
+        id="name"
+        type="text"
+        class="form-control">
+      <small *ngIf="f['name'].touched && f['name'].invalid" class="text-danger">
+        Name is required.
+      </small> <!-- Error message as a text line -->
+    </div>
+
+
+    <div class="form-group">
+      <label for="description">Description: <span class="text-danger">*</span>
+      </label>
+      <textarea
+        formControlName="description"
+        id="description"
+        class="form-control"
+        rows="3">
+    </textarea>
+      <small *ngIf="f['description'].touched && f['description'].invalid" class="text-danger">
+        Description is required.
+      </small> <!-- Error message as a text line -->
+    </div>
+
+    <div class="form-group mt-3">
+      <label for="category">Category: <span class="text-danger">*</span></label>
+      <select
+        formControlName="category"
+        id="category"
+        class="form-control">
+        <option value="">Select a category</option>
+        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+      </select>
+      <small *ngIf="f['category'].touched && f['category'].invalid" class="text-danger">
+        Category is required.
+      </small>
+    </div>
+
+
+    <div class="form-group">
+      <label for="quantity">Quantity: <span class="text-danger">*</span>
+      </label>
+      <input
+        formControlName="quantity"
+        id="quantity"
+        type="number"
+        class="form-control"
+      >
+      <small *ngIf="f['quantity'].touched && f['quantity'].invalid" class="text-danger">
+        Quantity is required.
+      </small> <!-- Error message as a text line -->
+    </div>
+
+    <div class="form-group">
+      <label for="unitPrice">Unit Price: <span class="text-danger">*</span>
+      </label>
+      <input
+        formControlName="unitPrice"
+        id="unitPrice"
+        type="number"
+        class="form-control"
+      >
+      <small *ngIf="f['unitPrice'].touched && f['unitPrice'].invalid" class="text-danger">
+        Unit Price is required.
+      </small> <!-- Error message as a text line -->
+    </div>
+
+
+    <div class="form-group">
+      <label for="createDate">Create Date:</label>
+      <input
+        formControlName="createDate"
+        id="createDate"
+        type="date"
+        class="form-control"
+      >
+    </div>
+
+    <div class="d-flex justify-content-end p-lg-2">
+      <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Create Product</button>
+    </div>
+  </form>
+
+</div>

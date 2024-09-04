@@ -1,0 +1,95 @@
+.navbar.bg-gray {
+  background-color: gray;
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+
+.container-fluid.justify-content-center {
+  display: flex;
+  justify-content: center;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #343a40;
+  padding: 10px 15px;
+}
+
+.navbar .navbar-brand {
+  font-weight: 600;
+}
+
+.navbar .btn {
+  padding: 6px 12px;
+}
+
+/* Container */
+.container {
+  margin-top: 30px;
+}
+
+/* Table */
+.table {
+  margin-top: 20px;
+  font-size: 14px;
+  th,
+  td {
+    text-align: center;
+  }
+}
+
+/* Pagination Styling */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+
+  .page-item {
+    margin: 0 5px;
+
+    &.disabled .page-link {
+      pointer-events: none;
+      color: #ccc;
+    }
+
+    &.active .page-link {
+      background-color: #007bff;
+      border-color: #007bff;
+      color: #fff;
+    }
+
+    .page-link {
+      padding: 6px 12px;
+      cursor: pointer;
+      color: #007bff;
+      border-radius: 5px;
+      border: 1px solid #dee2e6;
+    }
+  }
+}
+
+/* Page Size Dropdown */
+.d-flex {
+  align-items: center;
+}
+
+.me-2 {
+  margin-right: 0.5rem !important;
+}
+
+.ms-2 {
+  margin-left: 0.5rem !important;
+}
+
+.form-select {
+  width: auto;
+  margin-right: 0.5rem
+  padding: 8px 16px;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}

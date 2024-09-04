@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-gray">
+  <div class="container-fluid justify-content-center">
+    <a class="navbar-brand text-center" href="#" routerLink="/product/index">
+      <i class="fas fa-home me-2"></i>
+      <!-- Home icon with some right margin -->
+      Product Management System
+    </a>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <div class="form-group mt-3">
+    <label for="newCategory">Add New Category:</label>
+    <input
+      type="text"
+      id="newCategory"
+      [(ngModel)]="newCategory"
+      class="form-control"
+      placeholder="Enter a new category"
+    />
+    <button type="button" class="btn btn-primary mt-2" (click)="addCategory()">
+      Add Category
+    </button>
+  </div>
+
+  <div class="form-group mt-3">
+    <table class="table table-bordered mt-3">
+      <tr *ngFor="let cat of categoryList">
+        <td>{{ cat }}</td>
+        <td style="width: 5%">
+          <button type="button" (click)="deleteCat(cat)" class="btn btn-danger">
+            <i class="fas fa-trash"></i>
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
